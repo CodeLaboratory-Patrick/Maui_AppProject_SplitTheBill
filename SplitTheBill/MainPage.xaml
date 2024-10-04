@@ -11,8 +11,11 @@
     </ContentPage.Resources>
 
     <Grid Margin="15">
-        <RowDefinitions Height =".3*" />
-        <RowDefinitions Height =".7*" />
+        <Grid.RowDefinitions>
+            <RowDefinition Height =".3*" />
+            <RowDefinition Height =".7*" />
+        </Grid.RowDefinitions>
+        
         <Frame Padding="10"
                BackgroundColor="{StaticResource SectionsColor}"
                BorderColor="Transparent">
