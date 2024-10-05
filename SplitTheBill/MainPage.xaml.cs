@@ -21,19 +21,21 @@
         private void CalculateTotal()
         {
             //Total tip
-            var totalTip = (bill * tip) / 100;
+            var totalTip =
+                 (bill * tip) / 100;
 
             //Tip by person
             var tipByPerson = (totalTip / noPersons);
-            lblTipByPerson.Text = $"{tipByPerson: C}";
+            lblTipByPerson.Text = $"{tipByPerson:C}";
 
             //Subtotal
-            var subtotal = (bill * noPersons);
-            lblSubtotal.Text = $"{subtotal: C}";
+            var subtotal = (bill / noPersons);
+            lblSubtotal.Text = $"{subtotal:C}";
 
             //Total
-            var totalByPerson = (bill + totalTip) / noPersons;
-            lblTotal.Text = $"{totalByPerson: C}";
+            var totalByPerson =
+                 (bill + totalTip) / noPersons;
+            lblTotal.Text = $"{totalByPerson:C}";
         }
 
         private void sldTip_ValueChanged(object sender, ValueChangedEventArgs e)
@@ -55,7 +57,7 @@
 
         private void btnMinus_Clicked(object sender, EventArgs e)
         {
-            if(noPersons > 1)
+            if (noPersons > 1)
             {
                 noPersons--;
             }
